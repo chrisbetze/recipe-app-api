@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django
+  labels:
+    deployment: django
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: django
+  template:
+    metadata:
+      labels:
+        pod: django
+    spec:
+      containers:
+        - name: django
+          image: betzelos/django-test:1.0.1 # {"$imagepolicy": "flux-system:recipe-app-api"}
+          command: ["/bin/sh"]
+          args: ["-c", "python manage.py wait_for_db && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+          ports:
+            - name: django-port
+              containerPort: 8000
+          env:
+            - name: DB_USER
+              value: devuser
+
+            - name: DB_PASS
+              value: changeme
+              
+            - name: DB_NAME
+              value: devdb
+
+            - name: DB_HOST
+              value: postgres-service

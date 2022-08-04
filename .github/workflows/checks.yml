@@ -15,10 +15,14 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build Dockerfile
-        run: "docker build --file Dockerfile --tag betzelos/django-test:${{ env.GITHUB_REF_NAME }} ."
-      - name: Push to DockerHub
-        run: "docker push betzelos/django-test:${{ env.GITHUB_REF_NAME }}"
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v3
+        with:
+          image: betzelos/django-test
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Test
         run: docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py test"
       - name: Lint

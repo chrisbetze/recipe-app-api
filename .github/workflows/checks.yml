@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build Dockerfile
-        run: docker build . --tag betzelos/django-test:${{ GITHUB_REF_NAME }}
+        run: docker build . --tag betzelos/django-test:${{ env.GITHUB_REF_NAME }}
       - name: Push to DockerHub
         run: docker push betzelos/django-test:${{ env.GITHUB_REF_NAME }}
       - name: Test

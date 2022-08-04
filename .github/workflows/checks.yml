@@ -1,7 +1,10 @@
 ---
 name: Checks
 
-on: [push]
+on:
+  push:
+    tags:
+      - v1.**
 
 jobs:
   test-lint:

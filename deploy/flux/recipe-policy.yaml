@@ -9,5 +9,5 @@ spec:
     name: recipe-app-api
   policy:
     semver:
-      range: 1.0.x
+      range: v1.0.x
 

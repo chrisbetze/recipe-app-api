@@ -1,6 +1,6 @@
 # Silvanus Organization
 
-## About Teams and Roles
+## Teams and Roles
 
 Teams are groups of organization members that reflect Silvanus main projects with cascading access permissions and mentions. Each team has its own page within the organization. On a team's page, you can view **team members**, **child teams**, and the **team's repositories**.
 
@@ -29,7 +29,7 @@ As a team maintainer, you can manage team membership and settings such as:
 
 For more information, see also the [About team maintainers](https://docs.github.com/en/organizations/organizing-members-into-teams/assigning-the-team-maintainer-role-to-a-team-member#about-team-maintainers).
 
-## About Repositories
+## Repositories
 
 For each repository that you administer on GitHub, you can see an overview of every team or person with access to the repository. From the overview, you can also **invite new teams**, change each team or person's role for the repository, or remove access to the repository.
 
@@ -38,3 +38,11 @@ For each repository that you administer on GitHub, you can see an overview of ev
 You can give a team access to a repository or change a team's level of access to a repository in your repository settings. This will help you also **group** the repositories under your teams with specific permissions.
 
 For more information, see [Managing teams and people with access to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#inviting-a-team-or-person).
+
+### Base Permissions
+
+The base permissions for an organization is the default repository permission that apply to all members of an organization when accessing any of the organization's repositories. Base permissions do not apply to outside collaborators.
+
+We have set the base permission to **No Permission**.
+
+This means that in order to give an organization member additional access to your repository, you’ll need to **add them to teams** or make them collaborators on individual repositories.

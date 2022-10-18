@@ -45,6 +45,6 @@ The base permissions for an organization is the **default** repository permissio
 
 We have set the base permission to **No Permission**.
 
-This means that in order to give an organization member additional access to your repository, you’ll need to **add them to teams** or make them collaborators on individual repositories.
+This means that in order to give an organization member access to your repository, you’ll need to **add them to teams** or make them collaborators on individual repositories.
 
 For more information, see [Repository roles for an organization](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization).

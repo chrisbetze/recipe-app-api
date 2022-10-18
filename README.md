@@ -35,6 +35,6 @@ For each repository that you administer on GitHub, you can see an overview of ev
 
 ### Manage team access to an organization repository
 
-You can give a team access to a repository or change a team's level of access to a repository in your repository settings. This will help us also to **group** the repositories under the teams with specific permissions.
+You can give a team access to a repository or change a team's level of access to a repository in your repository settings. This will help you also **group** the repositories under your teams with specific permissions.
 
 For more information, see [Managing teams and people with access to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository#inviting-a-team-or-person).
